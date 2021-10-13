@@ -17,7 +17,7 @@
 
 // [1, 3, 6, 10, 15]
 
-// const arr = [1, 2, 3, 4, 5]
+const arr = [1, 2, 3, 4, 5]
 
 // const getSums = (arr) =>
 //   arr.reduce((sum, value) => {
