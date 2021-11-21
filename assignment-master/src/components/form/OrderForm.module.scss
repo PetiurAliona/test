@@ -1,0 +1,47 @@
+.wrapper {
+  width: 350px;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.selectLabel {
+  color: rgba(24, 28, 39, 0.6);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.selectCountry {
+  margin-left: 10px;
+  border-color: rgba(24, 28, 39, 0.2);
+  border-width: 2px;
+  border-radius: 5px;
+
+  &:focus,
+  &:hover {
+    border-color: #6495ed;
+  }
+}
+
+.addBtn {
+  margin-top: 20px;
+  background-color: #6495ed;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 8px 20px 8px 20px;
+  margin-right: 25px;
+
+  &:focus,
+  &:hover {
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    outline: none;
+    box-shadow: 0px 10px 15px rgb(148, 148, 148);
+    background-color: #a7c1f3;
+  }
+}

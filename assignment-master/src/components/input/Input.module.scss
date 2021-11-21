@@ -1,0 +1,101 @@
+:root {
+  --color-label-input: rgba(24, 28, 39, 0.6);
+  --color-input-text: #181c27;
+  --color-input-border: rgba(24, 28, 39, 0.2);
+  --color-input-focus: #6495ed;
+  --color-input-error: #e91818;
+}
+
+.wrapper {
+  position: relative;
+  padding: 15px 0 0;
+  width: 100%;
+}
+
+.input {
+  font-family: inherit;
+  position: relative;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--color-input-border);
+  outline: none;
+  color: var(--color-input-text);
+  padding: 7px 0 7px 8px;
+  background: transparent;
+  transition: border-color linear 250ms;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .label {
+    cursor: text;
+    top: 20px;
+  }
+
+  &:focus ~ .bottomLine::before {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.inputError {
+  border-color: var(--color-input-error);
+}
+
+.bottomLine {
+  position: relative;
+  background-color: var(--color-input-focus);
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: inherit;
+    transition: all linear 250ms;
+  }
+}
+
+.bottomLineError {
+  background-color: var(--color-input-error);
+}
+
+.label {
+  position: absolute;
+  top: -4px;
+  display: block;
+  transition: all linear 250ms;
+  color: var(--color-label-input);
+}
+
+.labelError {
+  color: var(--color-input-error);
+}
+
+.input:focus {
+  ~ .label {
+    position: absolute;
+    top: -4px;
+    display: block;
+    transition: all linear 250ms;
+    color: var(--color-input-focus);
+  }
+  ~ .labelError {
+    color: var(--color-input-error);
+  }
+}
+
+.error {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--color-input-error);
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+}
